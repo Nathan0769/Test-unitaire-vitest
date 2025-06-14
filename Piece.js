@@ -8,27 +8,27 @@ export class Piece {
   }
 
   getEmoji() {
-    if (this.state === 'clean') {
-      return '🧼';
+    if (this.state === "clean") {
+      return "🧼";
     }
 
-    if (this.state === 'clean_by_robot') {
-      return '🧽';
+    if (this.state === "clean_by_robot") {
+      return "🧽";
     }
 
-    return '💩';
+    return "💩";
   }
 
   get isDirty() {
-    return this.state === 'dirty';
+    return this.state === "dirty";
   }
 
   get isClean() {
-    return this.state === 'clean' || this.state === 'clean_by_robot';
+    return this.state === "clean" || this.state === "clean_by_robot";
   }
 
   clean() {
-    if (this.state !== 'dirty') return;
-    this.state = 'clean_by_robot';
+    if (this.state !== "dirty") return;
+    return (this.state = "clean_by_robot");
   }
 }
