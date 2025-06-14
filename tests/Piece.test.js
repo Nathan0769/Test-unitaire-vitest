@@ -1,5 +1,5 @@
 import { beforeAll, beforeEach, describe, expect, test, vi } from "vitest";
-import { Piece } from "./Piece.js";
+import { Piece } from "../Piece.js";
 
 describe("Test Piece", () => {
   test("get emoji clean", () => {
