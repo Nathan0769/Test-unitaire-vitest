@@ -1,5 +1,5 @@
-import { Piece } from './Piece.js';
-import { Robot } from './Robot.js';
+import { Piece } from "./Piece.js";
+import { Robot } from "./Robot.js";
 
 export class House {
   /**
@@ -25,7 +25,8 @@ export class House {
     for (let i = 0; i < this.layout.length; i++) {
       for (let j = 0; j < this.layout[i].length; j++) {
         if (this.layout[i][j].isDirty) {
-          const distance = Math.abs(position[0] - i) + Math.abs(position[1] - j);
+          const distance =
+            Math.abs(position[0] - i) + Math.abs(position[1] - j);
 
           if (nearestDistance === null || distance < nearestDistance) {
             nearestDistance = distance;
@@ -49,14 +50,14 @@ export class House {
 
   logLayout() {
     for (let i = 0; i < this.layout.length; i++) {
-      let row = '';
+      let row = "";
       for (let j = 0; j < this.layout[i].length; j++) {
         if (
           this.robot &&
           this.robot.position[0] === i &&
           this.robot.position[1] === j
         ) {
-          row += '🤖';
+          row += "🤖";
         } else {
           row += this.layout[i][j].getEmoji();
         }
